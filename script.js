@@ -38,5 +38,9 @@ function Circle(radius) {
         console.log("Draw with constructor function.")
     }
 }
+
+Circle.call({}, 1);
+Circle.apply({}, [1, 2, 3]);
+
 const constructorCircle = new Circle(1);
 constructorCircle.draw();
