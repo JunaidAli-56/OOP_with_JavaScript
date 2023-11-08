@@ -67,3 +67,16 @@ this.radius = radius;
 const circle3 = new Circle3(1);
 Circle3.call({}, 1)
 Circle3.apply({}, [1, 2, 3])
+
+
+
+// Value and Reference type
+let x = 10;
+let y = x;
+x = 20;
+// ans: x = 20; and y = 10; because both behave independ.
+
+let a = { value: 10 };
+let b = x;
+a = 20;
+// ans: a = 20; and b = 20; because object not store in varaible its store in somewhere in memory or address 
