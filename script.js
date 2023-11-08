@@ -1,5 +1,6 @@
 // Example of Object in object literals.
 // If you have more than 1 method don't use Object Literals.
+
 const circle = {
     // In OOP others are properties in Object : properties uses to holds the value.
     radius: 1,
@@ -44,3 +45,15 @@ Circle.apply({}, [1, 2, 3]);
 
 const constructorCircle = new Circle(1);
 constructorCircle.draw();
+
+
+// Function are Objects...
+
+function Circle2(radius) {
+    this.radius = radius;
+    this.draw = function () {
+        console.log("circle2 draw")
+    }
+}
+const another = new Circle2(2);
+console.log(another)

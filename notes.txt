@@ -1,0 +1,10 @@
+Constructor Property
+ - we write Strings in Js like ["",''',``] but js read like that 
+ * new String();
+ * new Boolean(); ..[true or false]
+ * new Number(); [1,2,3]
+
+
+Functions are Objects
+ * Every object in javascript has a constructor property.
+ * and that references the function are use to create an object
