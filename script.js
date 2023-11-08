@@ -66,3 +66,4 @@ this.radius = radius;
 // it shows that function are objects
 const circle3 = new Circle3(1);
 Circle3.call({}, 1)
+Circle3.apply({}, [1, 2, 3])
