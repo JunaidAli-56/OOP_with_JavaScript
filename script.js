@@ -56,4 +56,13 @@ function Circle2(radius) {
     }
 }
 const another = new Circle2(2);
-console.log(another)
+// the declare function [Circle2] is repesent like this function [Circle3] in js Engine
+const Circle3 = new Function('radius', `
+this.radius = radius;
+    this.draw = function () {
+        console.log("circle2 draw")
+    }
+`)
+// it shows that function are objects
+const circle3 = new Circle3(1);
+Circle3.call({}, 1)

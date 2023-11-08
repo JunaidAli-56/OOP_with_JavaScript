@@ -8,3 +8,8 @@ Constructor Property
 Functions are Objects
  * Every object in javascript has a constructor property.
  * and that references the function are use to create an object
+
+ - these two expression are equal 
+ * new Circle3(1);
+ * Circle3.call({}, 1) // in this line this will reference is {} which we pass in Circle3 , 1 is an arugument
+ * Circle3.call({}, 1,2,3,3,4) // if we have multiple aruguments.
