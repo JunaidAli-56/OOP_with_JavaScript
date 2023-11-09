@@ -173,6 +173,8 @@ if ('radius' in circle5)
 
 
 
+
+
 // Abstraction : in which we hide details and show essentials
 // in this case radius and draw method is essentials
 function Circle6(radius) {
