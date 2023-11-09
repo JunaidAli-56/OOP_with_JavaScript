@@ -47,6 +47,12 @@ const constructorCircle = new Circle(1);
 constructorCircle.draw();
 
 
+
+
+
+
+
+
 // Function are Objects...
 
 function Circle2(radius) {
@@ -67,6 +73,10 @@ this.radius = radius;
 const circle3 = new Circle3(1);
 Circle3.call({}, 1)
 Circle3.apply({}, [1, 2, 3])
+
+
+
+
 
 
 
@@ -97,3 +107,35 @@ function increase(obj) {
 }
 increase(obj);
 console.log(obj);
+
+
+
+
+// Adding or Removing Properties
+function Circle4(radius) {
+    this.radius = radius;
+    this.draw = function () {
+        console.assert.log("circle4 Draw");
+    }
+}
+const circle4 = new Circle4(10);
+
+// for adding properties
+// both are same:- .location is simpler but bracket notation is help in some condition like dynamic location.
+circle4.location = { x: 1 }
+circle4["location"] = { x: 2 }
+
+// for Dynamic location it is helpful
+const propertyName = "location";
+circle4[propertyName] = { x: 3 }
+
+// for removing properties
+
+delete circle4.location;
+// delete circle["location"];
+
+
+
+
+
+// Enumerating Properties
