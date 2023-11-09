@@ -170,3 +170,24 @@ console.log(keys)
 // 3rd method is [ in operator]: it is use to check the existence of property or a method in an object
 if ('radius' in circle5)
     console.log("Circle5 has a radius")
+
+
+
+// Abstraction : in which we hide details and show essentials
+// in this case radius and draw method is essentials
+function Circle6(radius) {
+    this.radius = radius;
+
+    this.defaultLocation = { x: 0, y: 0 };
+
+    this.computeOptimumLocation = function (factor) {
+        //...
+    }
+    this.draw = function () {
+        this.computeOptimumLocation(0.1)
+        console.assert.log("circle6 Draw");
+    }
+}
+const circle6 = new Circle6(11);
+circle6.computeOptimumLocation();
+circle6.draw();
