@@ -80,3 +80,20 @@ let a = { value: 10 };
 let b = x;
 a = 20;
 // ans: a = 20; and b = 20; because object not store in varaible its store in somewhere in memory or address 
+
+// another example
+// It is the primitive and its copied by the value so its return 10 because their are two independent properties
+let number = 10;
+function increase(number) {
+    number++;
+}
+increase(number);
+console.log(number);
+
+// It is the object and its copied by their references so its return 11.
+let obj = { value: 10 };
+function increase(obj) {
+    obj.value++;
+}
+increase(obj);
+console.log(obj);
