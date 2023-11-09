@@ -138,4 +138,35 @@ delete circle4.location;
 
 
 
-// Enumerating Properties
+// Enumerating Properties : To Enumerate all the members in object: 3 methods
+function Circle5(radius) {
+    this.radius = radius;
+    this.draw = function () {
+        console.assert.log("circle5 Draw");
+    }
+}
+const circle5 = new Circle5(10);
+
+// First Method [for in loop]
+for (let key in circle5) {
+    if (typeof circle[key] !== "function") {
+        console.log(key, circle5[key])
+    }
+
+
+    // if (typeof circle[key] !== "function") {
+    //     console.log(key, circle5[key])
+    // } else {
+    //     console.log(key, circle5[key])
+    // }
+}
+
+// 2nd Method Object.keys()
+// another approch to get all the keys and an object. it return all the keys in an array.
+// with this approach we cannot separate properties from methods
+const keys = Object.keys(circle5);
+console.log(keys)
+
+// 3rd method is [ in operator]: it is use to check the existence of property or a method in an object
+if ('radius' in circle5)
+    console.log("Circle5 has a radius")
